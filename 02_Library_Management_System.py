@@ -112,35 +112,3 @@ while True:
 
 
 
-# ---------------- File Handling in Python(JSON)----------------
-
-# 1. open(file, mode)
-#    - Opens a file and returns a file object.
-#    - file  → name of the file (example: "library.json")
-#    - mode  → how you want to use the file:
-#        "r" → read mode (default). Error if file doesn’t exist.
-#        "w" → write mode. Creates a new file or overwrites existing.
-#        "a" → append mode. Adds new data to the end of file.
-#        "x" → exclusive creation. Error if file already exists.
-#        "rb"/"wb" → read/write in binary mode.
-
-# 2. with open(filename, mode) as f:
-#    - 'with' is a context manager → automatically closes the file.
-#    - 'f' is the file object (a handle you use to read/write).
-
-# Example:
-# with open("library.json", "w") as f:
-#     f.write("Hello Library")
-#
-# Explanation of example:
-# - "library.json" is opened in write mode ("w").
-# - f is the file object used to interact with the file.
-# - f.write("Hello Library") writes text into the file.
-# - After the block ends, Python automatically closes the file.
-
-# 3. In JSON usage:
-# with open("library.json", "w") as f:
-#     json.dump(data, f, indent=4)   # Save Python data into file in JSON format
-#
-# with open("library.json", "r") as f:
-#     data = json.load(f)            # Load JSON data back into Python objects
